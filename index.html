@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evento Speciale</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Nome dell'Evento</h1>
+    <p>Un'occasione imperdibile per imparare, connettersi e crescere!</p>
+  </header>
+
+  <main>
+    <section id="details">
+      <h2>Dettagli dell'Evento</h2>
+      <p><strong>Data:</strong> 15 Dicembre 2024</p>
+      <p><strong>Luogo:</strong> Centro Congressi, Milano</p>
+      <p><strong>Descrizione:</strong> Una giornata di workshop, networking e divertimento per tutti gli appassionati del settore.</p>
+    </section>
+
+    <section id="form">
+      <h2>Iscriviti Ora</h2>
+      <form action="https://formspree.io/f/mnqwowzb" method="POST">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Telefono:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="notes">Note (opzionale):</label>
+        <textarea id="notes" name="notes"></textarea>
+
+        <button type="submit">Iscriviti</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Evento Speciale. Tutti i diritti riservati.</p>
+  </footer>
+</body>
+</html>
