@@ -31,11 +31,40 @@
             max-width: 90%;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.3s ease;
         }
-        .left-section h2 {
-            margin-top: 20px;
-            font-size: 24px;
-            font-weight: bold;
+        .left-section img:hover {
+            transform: scale(1.05);
+        }
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+        .popup img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.8);
+        }
+        .popup:target {
+            display: flex;
+        }
+        .popup .close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2rem;
+            color: white;
+            text-decoration: none;
         }
         .right-section {
             width: 50%;
@@ -103,7 +132,9 @@
     <div class="container">
         <div class="left-section">
             <div>
-                <img src="event-program.jpg" alt="Programma dell'evento">
+                <a href="#popup">
+                    <img src="event-program.jpg" alt="Programma dell'evento">
+                </a>
                 <h2>Let's Make it Happen Together!</h2>
             </div>
         </div>
@@ -127,6 +158,12 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Pop-up -->
+    <div id="popup" class="popup">
+        <a href="#" class="close">&times;</a>
+        <img src="event-program.jpg" alt="Programma Ingrandito">
     </div>
 </body>
 </html>
