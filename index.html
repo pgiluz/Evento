@@ -3,47 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evento Friends for Life</title>
+    <title>Friends for Life - Iscrizione</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
             color: #333;
         }
-        .header {
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+        }
+        .left-section {
+            width: 50%;
+            background-color: #1abc9c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 20px;
-            background: #2c3e50;
             color: white;
-        }
-        .header h1 {
-            margin: 0;
-        }
-        .content {
             padding: 20px;
-            text-align: center;
         }
-        .content img {
+        .left-section img {
             max-width: 90%;
-            height: auto;
-            margin: 20px auto;
-            border: 5px solid #2c3e50;
             border-radius: 10px;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
         }
+        .left-section h2 {
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .right-section {
+            width: 50%;
+            background-color: #2c3e50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
         .form-container {
-            max-width: 500px;
-            margin: 30px auto;
+            width: 80%;
+            max-width: 400px;
+            background: #34495e;
             padding: 20px;
-            background: white;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         .form-container h2 {
+            text-align: center;
             margin-bottom: 20px;
-            color: #2c3e50;
+            font-size: 22px;
+            color: #1abc9c;
         }
         .form-container form {
             display: flex;
@@ -54,7 +68,7 @@
             margin-bottom: 5px;
             font-weight: bold;
         }
-        .form-container input, .form-container button {
+        .form-container input {
             margin-bottom: 15px;
             padding: 10px;
             font-size: 1rem;
@@ -62,47 +76,57 @@
             border-radius: 5px;
         }
         .form-container button {
-            background: #2c3e50;
+            padding: 10px;
+            font-size: 1rem;
+            background: #1abc9c;
             color: white;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
             transition: background 0.3s ease;
         }
         .form-container button:hover {
-            background: #1abc9c;
+            background: #16a085;
         }
         .footer {
             text-align: center;
             padding: 10px;
-            background: #2c3e50;
+            font-size: 14px;
+            background: #1abc9c;
             color: white;
+            margin-top: 20px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Friends for Life</h1>
-        <p>12 Aprile 2025</p>
-    </div>
-    <div class="content">
-        <img src="event-program.jpg" alt="Programma dell'evento">
-        <div class="form-container">
-            <h2>Iscriviti all'evento</h2>
-            <form action="#" method="post">
-                <label for="name">Nome e Cognome</label>
-                <input type="text" id="name" name="name" placeholder="Inserisci il tuo nome" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
-
-                <label for="phone">Telefono</label>
-                <input type="tel" id="phone" name="phone" placeholder="Inserisci il tuo numero" required>
-
-                <button type="submit">Invia Iscrizione</button>
-            </form>
+    <div class="container">
+        <div class="left-section">
+            <div>
+                <img src="event-program.jpg" alt="Programma dell'evento">
+                <h2>Let's Make it Happen Together!</h2>
+            </div>
         </div>
-    </div>
-    <div class="footer">
-        <p>© 2025 Friends for Life. Tutti i diritti riservati.</p>
+        <div class="right-section">
+            <div class="form-container">
+                <h2>Iscriviti all'evento</h2>
+                <form action="send-mail.php" method="post">
+                    <label for="name">Nome e Cognome</label>
+                    <input type="text" id="name" name="name" placeholder="Inserisci il tuo nome" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
+                    
+                    <label for="phone">Telefono</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Inserisci il tuo numero" required>
+                    
+                    <button type="submit">Invia Iscrizione</button>
+                </form>
+                <div class="footer">
+                    © 2025 Friends for Life. Tutti i diritti riservati.
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
