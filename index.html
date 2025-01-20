@@ -1,46 +1,108 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evento Speciale</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Friends for Life</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content img {
+            max-width: 90%;
+            height: auto;
+            margin: 20px auto;
+            border: 5px solid #2c3e50;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-container label {
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-container input, .form-container button {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-container button {
+            background: #2c3e50;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .form-container button:hover {
+            background: #1abc9c;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background: #2c3e50;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-<header>
-  <img src="evento.jpg" alt="Friends for Life" style="width: 100%; max-height: 400px; object-fit: cover;">
-</header>
+    <div class="header">
+        <h1>Friends for Life</h1>
+        <p>12 Aprile 2025</p>
+    </div>
+    <div class="content">
+        <img src="event-program.jpg" alt="Programma dell'evento">
+        <div class="form-container">
+            <h2>Iscriviti all'evento</h2>
+            <form action="#" method="post">
+                <label for="name">Nome e Cognome</label>
+                <input type="text" id="name" name="name" placeholder="Inserisci il tuo nome" required>
 
-  <main>
-    <section id="details">
-      <h2>Dettagli dell'Evento</h2>
-      <p><strong>Data:</strong> 15 Dicembre 2024</p>
-      <p><strong>Luogo:</strong> Centro Congressi, Milano</p>
-      <p><strong>Descrizione:</strong> Una giornata di workshop, networking e divertimento per tutti gli appassionati del settore.</p>
-    </section>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
 
-    <section id="form">
-      <h2>Iscriviti Ora</h2>
-      <form action="https://formspree.io/f/mnqwowzb" method="POST">
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" required>
+                <label for="phone">Telefono</label>
+                <input type="tel" id="phone" name="phone" placeholder="Inserisci il tuo numero" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="phone">Telefono:</label>
-        <input type="tel" id="phone" name="phone" required>
-
-        <label for="notes">Note (opzionale):</label>
-        <textarea id="notes" name="notes"></textarea>
-
-        <button type="submit">Iscriviti</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2024 Evento Speciale. Tutti i diritti riservati.</p>
-  </footer>
+                <button type="submit">Invia Iscrizione</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2025 Friends for Life. Tutti i diritti riservati.</p>
+    </div>
 </body>
 </html>
