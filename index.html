@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             color: #333;
         }
         .container {
@@ -19,8 +19,9 @@
         }
         .left-section {
             width: 50%;
-            background-color: #1abc9c;
+            background-color: #123524; /* Verde scuro */
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
@@ -36,6 +37,11 @@
         }
         .left-section img:hover {
             transform: scale(1.05);
+        }
+        .left-section p {
+            font-size: 0.9rem;
+            margin-top: 5px;
+            color: #f1c40f; /* Giallo */
         }
         .popup {
             position: fixed;
@@ -68,7 +74,7 @@
         }
         .right-section {
             width: 50%;
-            background-color: #2c3e50;
+            background-color: #e74c3c; /* Rosso */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -77,7 +83,7 @@
         .form-container {
             width: 80%;
             max-width: 400px;
-            background: #34495e;
+            background: #34495e; /* Grigio scuro */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -86,7 +92,7 @@
             text-align: center;
             margin-bottom: 20px;
             font-size: 22px;
-            color: #1abc9c;
+            color: #f1c40f; /* Giallo */
         }
         .form-container form {
             display: flex;
@@ -107,7 +113,7 @@
         .form-container button {
             padding: 10px;
             font-size: 1rem;
-            background: #1abc9c;
+            background: #27ae60; /* Verde chiaro */
             color: white;
             border: none;
             border-radius: 5px;
@@ -115,13 +121,13 @@
             transition: background 0.3s ease;
         }
         .form-container button:hover {
-            background: #16a085;
+            background: #2ecc71; /* Verde più vivace */
         }
         .footer {
             text-align: center;
             padding: 10px;
             font-size: 14px;
-            background: #1abc9c;
+            background: #123524; /* Verde scuro */
             color: white;
             margin-top: 20px;
             border-radius: 5px;
@@ -131,17 +137,16 @@
 <body>
     <div class="container">
         <div class="left-section">
-            <div>
-                <a href="#popup">
-                    <img src="event-program.jpg" alt="Programma dell'evento">
-                </a>
-                <h2>Friends for Life</h2>
-            </div>
+            <a href="#popup">
+                <img src="event-program.jpg" alt="Programma dell'evento">
+            </a>
+            <p>Clicca per ingrandire</p>
+            <h2>Let's Make it Happen Together!</h2>
         </div>
         <div class="right-section">
             <div class="form-container">
                 <h2>Iscriviti all'evento</h2>
-                <form action="send-mail.php" method="post">
+                <form action="register.php" method="post">
                     <label for="name">Nome e Cognome</label>
                     <input type="text" id="name" name="name" placeholder="Inserisci il tuo nome" required>
                     
@@ -154,7 +159,7 @@
                     <button type="submit">Invia Iscrizione</button>
                 </form>
                 <div class="footer">
-                    © 2025 Friends on the Lake. Tutti i diritti riservati.
+                    © 2025 Friends for Life. Tutti i diritti riservati.
                 </div>
             </div>
         </div>
